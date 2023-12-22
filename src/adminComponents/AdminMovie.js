@@ -275,7 +275,7 @@ function AdminMovie(props) {
                           description: element.description,
                           date: element.date,
                           time: element.time,
-                          imageurl: require(`../images/${element.name.toLowerCase()}.jpg`),
+                          imageurl: require(`../images/Movie.jpg`),
                           catname: element.catname,
                         }}
                         baseUrl={props.baseUrl}

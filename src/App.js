@@ -48,6 +48,8 @@ function App() {
     let parsedData = await data.json();
     if (parsedData.length > 0) {
       setCart(parsedData);
+    }else{
+      setCart([]);
     }
   };
 
@@ -215,6 +217,7 @@ function App() {
                   searchData={searchData}
                   setSearchData={setSearchData}
                   getCartCount={getCartCount}
+                  showAlert={showAlert}
                   getUser={getUser}
                 />
               }

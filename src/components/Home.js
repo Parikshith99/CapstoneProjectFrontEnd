@@ -10,10 +10,12 @@ const Home = (props) => {
     if (parsedData.length > 0) {
       props.setSearchData(parsedData);
     } else {
+      props.setSearchData([]);
       props.showAlert("No movies to display", "danger");
     }
   };
   useEffect(() => {
+
     update();
 
     if (localStorage.getItem("token")) {
@@ -39,7 +41,7 @@ const Home = (props) => {
                       language: element.language,
                       description: element.description,
                       date: element.date,
-                      imageurl: require(`../images/${element.name.toLowerCase()}.jpg`),
+                      imageurl: require(`../images/Movie.jpg`),
                       catname: element.catname,
                     }}
                   />

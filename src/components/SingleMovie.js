@@ -66,9 +66,8 @@ function SingleMovie(props) {
             <div className="col-md-7">
               <img
                 src={
-                  movie.name
-                    ? require(`../images/${movie.name.toLowerCase()}.jpg`)
-                    : require(`../images/default.jpg`)
+              
+                    require(`../images/default.jpg`)
                 }
                 className="img-fluid rounded-start"
                 alt="..."

@@ -11,11 +11,11 @@ function AddMovie(props) {
     time: "",
     catname: "",
   });
-  const [selectedFile, setSelectedFile] = useState(null);
+  // const [selectedFile, setSelectedFile] = useState(null);
   let history = useNavigate();
-  const onChangesubmitFile = async (e) => {
-    setSelectedFile(e.target.files[0]);
-  };
+  // const onChangesubmitFile = async (e) => {
+  //   setSelectedFile(e.target.files[0]);
+  // };
 
   const handleAddMovie = async (e) => {
     e.preventDefault();
@@ -43,12 +43,12 @@ function AddMovie(props) {
       props.showAlert("Something went wrong...", "danger");
     }
 
-    const fd = new FormData();
-    fd.append("file", selectedFile);
-    await fetch(`${props.baseUrl}/admin/upload`, {
-      method: "POST",
-      body: fd,
-    });
+    // const fd = new FormData();
+    // fd.append("file", selectedFile);
+    // await fetch(`${props.baseUrl}/admin/upload`, {
+    //   method: "POST",
+    //   body: fd,
+    // });
   };
 
   const onChange = (e) => {
@@ -161,14 +161,14 @@ function AddMovie(props) {
               aria-describedby="emailHelp"
             />
           </div>
-          <div className="mb-2">
+          {/* <div className="mb-2">
             <input
               type="file"
               onChange={onChangesubmitFile}
               accept="image/jpeg"
               required
             />
-          </div>
+          </div> */}
           <button type="submit" className="btn btn-primary">
             Submit
           </button>

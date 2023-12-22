@@ -22,7 +22,7 @@ function Search(props) {
                       language: element.language,
                       description: element.description,
                       date: element.date,
-                      imageurl: require(`../images/${element.name.toLowerCase()}.jpg`),
+                      imageurl: require(`../images/Movie.jpg`),
                       catname: element.catname,
                     }}
                   />
